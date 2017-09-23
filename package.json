@@ -1,0 +1,14 @@
+{
+  "name": "option",
+  "version": "1.0.0",
+  "description": "An option implementation inspired by Rust's Option type",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava tests"
+  },
+  "author": "Matt",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^0.22.0"
+  }
+}
