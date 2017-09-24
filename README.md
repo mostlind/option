@@ -63,6 +63,19 @@ existant
     .isNone() // true
 ```
 
+`flatMap` allows for the flattening of nested options
+
+This is a nested prop getter using `flatMap`
+```javascript
+const prop = prop => obj => Option(obj[prop])
+
+prop('b')(state).map(prop('c')) // Option(Option('hello'))
+
+prop('b')(state).flatMap(prop('c')) // Option('hello')
+prop('b')(state).flatMap(prop('d')) // Option()
+
+```
+
 Each method has a static equivalent
 ```javascript
 Option.unwrap(existant) // 4
